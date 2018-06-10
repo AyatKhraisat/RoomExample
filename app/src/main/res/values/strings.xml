@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RoomExample</string>
+    <string name="no_todo_found">No toDo found</string>
+    <string name="add_todo">Enter Todo:</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">save</string>
+    <string name="delete">Delete</string>
+</resources>
