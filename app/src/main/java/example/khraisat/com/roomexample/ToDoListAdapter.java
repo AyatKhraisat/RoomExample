@@ -50,7 +50,7 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ViewHo
         ToDoModel toDo = toDoList.get(position);
 
         holder.toDoTextView.setText(toDo.getToDo());
-        holder.toDoKeyTextView.setText(toDo.getToDoId() + "");
+        holder.toDoKeyTextView.setText(String.format("ToDo #%d", toDo.getToDoId()));
 
 
     }
@@ -90,7 +90,7 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ViewHo
             deleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                deleteButtonClickListener.onDeleteClick(toDoList.get(getAdapterPosition()));
+                    deleteButtonClickListener.onDeleteClick(toDoList.get(getAdapterPosition()));
                     toDoList.remove(toDoList.get(getAdapterPosition()));
                     notifyDataSetChanged();
                 }
